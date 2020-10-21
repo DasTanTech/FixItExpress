@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".otpPage">
+
+    <LinearLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="OTP"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:gravity="center_horizontal|bottom"/>
+
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:src="@drawable/logo"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/one">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A 6-digit OTP has been sent to your phone number."
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14sdp"
+            android:layout_margin="@dimen/_15sdp"/>
+
+
+        <com.goodiebag.pinview.Pinview
+            android:id="@+id/OTP_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:pinWidth="40dp"
+            app:pinHeight="40dp"
+            app:pinLength="6"
+            app:cursorVisible="false"
+            app:hint="-"
+            app:forceKeyboard="false"
+            app:inputType="number"
+            app:password="false"/>
+
+
+        <TextView
+            android:id="@+id/OTP_timer"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Timer"/>
+
+
+        <Button
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:id="@+id/OTP_verifyBtn"
+            android:paddingRight="@dimen/_10sdp"
+            android:elevation="@dimen/_15sdp"
+            android:background="@drawable/btn_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verify  "
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:textSize="@dimen/_15sdp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+
+            android:textColor="@color/colorPrimary"
+            android:drawableEnd="@drawable/ic_arrow"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

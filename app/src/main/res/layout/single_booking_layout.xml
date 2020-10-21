@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView app:cardElevation="8dp"
+    app:cardCornerRadius="@dimen/_8sdp"
+    android:layout_margin="@dimen/_10sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:enabled="false"
+            android:theme="@style/customTIL"
+            android:id="@+id/appointmentsFrag_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:textColorHint="@color/colorWhite"
+            app:startIconTint="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:editable="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00ffffff"
+                android:hint="Service "
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:text=""
+                android:textColorHighlight="@color/colorPrimary"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:enabled="false"
+            android:theme="@style/customTIL"
+            android:id="@+id/appointmentsFrag_date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:textColorHint="@color/colorWhite"
+            app:startIconTint="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:editable="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#00ffffff"
+                android:hint="Appointment Date "
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:text=""
+                android:textColorHighlight="@color/colorPrimary"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

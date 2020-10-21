@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".servicePage">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/service_appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/services_collapsingToolBarLayout"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentScrim="@color/colorPrimary">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax"
+                android:background="@color/colorWhite">
+
+
+                <ImageView
+                    android:id="@+id/service_imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_300sdp"
+                    android:src="@drawable/logo"
+                    android:scaleType="centerCrop"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:background="@color/colorWhite">
+
+                    <TextView
+                        android:id="@+id/service_name"
+                        android:background="@color/colorWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="#000000"
+                        android:textSize="@dimen/_23sdp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"/>
+
+
+                    <TextView
+                        android:background="@color/colorWhite"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Please ensure that your Society/RWA permits the\nentry of service professionals"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:textSize="@dimen/_11sdp"/>
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/service_toolbar"
+                app:layout_collapseMode="pin"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                />
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Consultation Fee :"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/_5sdp"/>
+
+                <TextView
+                    android:id="@+id/service_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="3150"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_margin="@dimen/_5sdp"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/colorPrimary">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Get it fixed in"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_18sdp"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:textColor="@color/colorWhite"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="!! 24 Hours !!"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:textColor="@color/colorWhite"/>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <RelativeLayout
+
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:elevation="10dp">
+
+        <Button
+            android:elevation="@dimen/_10sdp"
+            android:id="@+id/service_bookAppointmentBtn"
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:text="Book a appointment"
+            android:background="@drawable/btn_bg2"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_15sdp"/>
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
